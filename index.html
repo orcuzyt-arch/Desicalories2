@@ -222,12 +222,36 @@ footer{background:#040304;padding:2.5rem 0 2rem;border-top:1px solid rgba(212,17
 
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
-  .hero{grid-template-columns:1fr}.hero-right{display:none}
-  .hero-left{padding:8rem 2rem 5rem}
+
+  /* Hero: stack vertically, dish below text */
+  .hero{grid-template-columns:1fr;grid-template-rows:auto auto;min-height:100vh}
+  .hero-left{padding:7rem 2rem 2rem;text-align:center;align-items:center}
+  .hero-eyebrow{justify-content:center}
+  .hero-tagline{text-align:center;max-width:100%}
+  .hero-ctas{justify-content:center}
+  .hero-info-pills{justify-content:center}
+  .hero-scroll{left:50%;transform:translateX(-50%);position:relative;bottom:auto;margin-top:1.5rem}
+
+  /* Show hero-right on mobile as a centered dish section */
+  .hero-right{display:block;position:relative;height:340px;overflow:hidden}
+  .hero-gradient-panel{opacity:0.6}
+
+  /* Scale dish for mobile */
+  .hero-dish-wrap{padding-bottom:1.5rem}
+  .hero-dish-img{width:72%;max-width:300px}
+  .hero-dish-name{font-size:0.95rem}
+
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
   .exp-grid{grid-template-columns:1fr}.exp-card:nth-child(2){margin-top:0}
   .section-inner{padding:0 1.5rem}
   .about-section,.menu-section,.exp-section,.reviews-section,.contact-section{padding:5rem 0}
+}
+
+@media(max-width:480px){
+  .hero-title{font-size:3.5rem}
+  .hero-logo-mark{width:70px;height:70px}
+  .hero-right{height:300px}
+  .hero-dish-img{width:80%;max-width:260px}
 }
 
 /* Hero dish image */
